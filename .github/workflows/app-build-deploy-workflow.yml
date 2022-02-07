@@ -27,7 +27,6 @@ jobs:
           name: app
           path: website/**
           if-no-files-found: error
-
 deploy:
   needs: build
   runs-on: ubuntu-latest
