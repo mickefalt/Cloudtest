@@ -31,16 +31,13 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download Azure-cli
-        uses: azure/action-install-azure-cli@v1
-        uses: azure/webapps-deploy@v2
       - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
           name: app
           path: app
       - name: Login to Azure
-        uses: azure/login@v1
+        uses: azure/actions/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
       - name: Deploy to Azure
