@@ -31,11 +31,7 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-    runs-on: self-hosted-ubuntu
-    steps:
-      # Install azure-cli
-      - uses: elstudio/action-install-azure-cli@v1
-      # Now run whatever steps require the `az` command line utility 
+    - uses: elstudio/action-install-azure-cli@v1
       - uses: azure/webapps-deploy@v2
       - name: Download Artifact
         uses: actions/download-artifact@v2
