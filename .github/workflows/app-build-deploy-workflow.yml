@@ -43,9 +43,7 @@ jobs:
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
         with:
-          app-name: CloudTest1
+          app-name: CloudTest
           package: app
-      - run: |
-            az webapp list --query "[?state=='Running']"
       - name: Logout from Azure
         run: az logout
