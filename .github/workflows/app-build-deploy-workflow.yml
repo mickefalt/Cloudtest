@@ -32,8 +32,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download Azure-cli
-      - uses: azure/action-install-azure-cli@v1
-      - uses: azure/webapps-deploy@v2
+        uses: azure/action-install-azure-cli@v1
+        uses: azure/webapps-deploy@v2
       - name: Download Artifact
         uses: actions/download-artifact@v2
         with:
