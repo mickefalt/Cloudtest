@@ -43,7 +43,7 @@ jobs:
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
         with:
-          app-name: CloudTest1
+          app-name: primary-production-web-server
           package: app
       - name: Logout from Azure
         run: az logout
