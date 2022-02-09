@@ -37,7 +37,7 @@ jobs:
           name: app
           path: app
       - name: Login to Azure
-            uses: Azure/login@v1
+            uses: azure/login@v1
             env:
             CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
             with:
