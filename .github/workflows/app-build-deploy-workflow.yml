@@ -43,7 +43,7 @@ jobs:
       - name: Deploy to Azure
         uses: azure/webapps-deploy@v2
         with:
-          app-name: amdb
+          app-name: amdb.swedencentral.cloudapp.azure.com
           package: app
       - name: Logout from Azure
         run: az logout
